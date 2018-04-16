@@ -8,13 +8,8 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class ExampleService {
+public interface ExampleService {
 
-    public Example getCompletedExample(String uncompleteExample) {
-        String completedExample = uncompleteExample.replaceAll("un", "");
-        Example example = new Example();
-        example.setCompletedExample(completedExample);
-        return example;
-    }
+    Example getCompletedExample(String uncompleteExample);
 
 }
