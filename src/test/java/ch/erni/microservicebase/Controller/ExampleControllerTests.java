@@ -1,7 +1,7 @@
 package ch.erni.microservicebase.Controller;
 
 import ch.erni.microservicebase.Model.Example;
-import ch.erni.microservicebase.Service.ExampleService;
+import ch.erni.microservicebase.Service.ExampleServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ExampleControllerTests {
 
     @Mock
-    private ExampleService exampleService;
+    private ExampleServiceImpl exampleService;
 
     private ExampleController exampleController;
 

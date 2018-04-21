@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ExampleServiceTests {
 
 
-    private ExampleService exampleService = new ExampleService();
+    private ExampleServiceImpl exampleService = new ExampleServiceImpl();
 
     @Test
     public void getCompletedExample_with_correct_input_string_must_deliver_correct_output_message() {
@@ -24,6 +24,12 @@ public class ExampleServiceTests {
     @Test
     public void getCompletedExample_with_incorrect_input_string_must_deliver_correct_output_message() {
         String testString = "I am an full uncompleted example!";
+        assertThat(exampleService.getCompletedExample(testString).getCompletedExample()).isNotEqualTo("I am an completed example!");
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void getCompletedExample_with_null_as_input_string_must_deliver_correct_output_message() {
+        String testString = null;
         assertThat(exampleService.getCompletedExample(testString).getCompletedExample()).isNotEqualTo("I am an completed example!");
     }
 }

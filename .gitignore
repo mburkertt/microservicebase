@@ -50,3 +50,9 @@
 /mvnw.cmd
 /target
 /testingtool.iml
+.idea/uiDesigner.xml
+.idea/eclipseCodeFormatter.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/checkstyleidea-libs/readme.txt
+.idea/checkstyle-idea.xml
+.editorconfig

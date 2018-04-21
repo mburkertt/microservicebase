@@ -10,6 +10,11 @@ import org.springframework.stereotype.Service;
 @Service
 public interface ExampleService {
 
+    /**
+     * This method receives a String and delivers an example object with the modified string
+     * @param uncompleteExample
+     * @return Example example
+     */
     Example getCompletedExample(String uncompleteExample);
 
 }
