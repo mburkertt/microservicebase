@@ -14,20 +14,23 @@ import javax.annotation.Resource;
 @RestController
 public class ExampleController {
 
-	private final ExampleService exampleService;
-	@Resource(name = "uncompleteExample")
-	private String uncompleteExample;
-	@Autowired
-	public ExampleController(ExampleService exampleService) {
-		this.exampleService = exampleService;
-	}
-	@RequestMapping("/")
-	public String exampleController() {
-		return exampleService.getCompletedExample(uncompleteExample).getCompletedExample();
-	}
-	@RequestMapping("/executeTestcase")
-	public String executeTestcase() {
-		return exampleService.getCompletedExample(uncompleteExample).getCompletedExample();
-	}
+    private final ExampleService exampleService;
+    @Resource(name = "uncompleteExample")
+    private String uncompleteExample;
+
+    @Autowired
+    public ExampleController(ExampleService exampleService) {
+        this.exampleService = exampleService;
+    }
+
+    @RequestMapping("/")
+    public String exampleController() {
+        return exampleService.getCompletedExample(uncompleteExample).getCompletedExample();
+    }
+
+    @RequestMapping("/executeTestcase")
+    public String executeTestcase() {
+        return exampleService.getCompletedExample(uncompleteExample).getCompletedExample();
+    }
 
 }
